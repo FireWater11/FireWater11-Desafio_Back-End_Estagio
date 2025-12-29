@@ -32,7 +32,7 @@ public class ProdutosDomain {
     private String title;
 
     @Column(nullable=false, length=100)
-    private int price;
+    private Integer price;
 
     @Column(nullable=false, length=100)
     private String zipcode;
@@ -45,6 +45,5 @@ public class ProdutosDomain {
 
     @Column(nullable=false, length=100)
     private String date;
-
 
 }
