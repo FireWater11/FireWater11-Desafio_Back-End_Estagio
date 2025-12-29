@@ -29,18 +29,18 @@ public class CartaoDeCreditoDomain {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable=false, length=100)
+    @Column(name = "card_number", nullable=false, length=100)
     private String card_number;
 
-    @Column(nullable=false, length=100)
+    @Column(name = "card_holder_name", nullable=false, length=100)
     private String card_holder_name;
 
-    @Column(nullable=false, length=100)
-    private Integer value;
+    @Column(name = "amount", nullable=false, length=100)
+    private Integer amount;
 
-    @Column(nullable=false, length=100)
+    @Column(name = "cvv", nullable=false, length=100)
     private Integer cvv;
 
-    @Column(nullable=false, length=100)
+    @Column(name = "exp_date", nullable=false, length=100)
     private String exp_date;
 }
