@@ -21,7 +21,7 @@ public class ProdutoController {
 
     @PostMapping("/products")
     public String cadastrarProduto(@RequestBody ProdutoDTO body) {
-        
+        produtos.cadastrarProduto(body);
         return "Produto cadastrado.";
     }
 
