@@ -35,7 +35,7 @@ public class TransacaoDomain {
     private String client_name;
 
     @Column(nullable=false, length=100)
-    private int total_to_pay;
+    private Integer total_to_pay;
 
     @Column(nullable=false, length=100)
     private CartaoDeCreditoDomain credit_card;
