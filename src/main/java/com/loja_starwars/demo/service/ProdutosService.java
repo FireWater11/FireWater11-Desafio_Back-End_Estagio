@@ -40,6 +40,8 @@ public class ProdutosService {
             dto.getThumbnailHd(),
             dto.getDate()
         );
+
+        System.out.println(novoProduto);
         
         return produtos.save(novoProduto);
     }

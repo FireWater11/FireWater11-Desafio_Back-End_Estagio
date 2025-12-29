@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -28,15 +30,17 @@ public class TransacaoDomain {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable=false, length=100)
+    @Column(name = "client_id", nullable=false, length=100)
     private String client_id;
 
-    @Column(nullable=false, length=100)
+    @Column(name = "client_name", nullable=false, length=100)
     private String client_name;
 
-    @Column(nullable=false, length=100)
+    @Column(name = "total_to_pay", nullable=false, length=100)
     private Integer total_to_pay;
 
-    @Column(nullable=false, length=100)
+    // @Column(name = "CartaoDeCreditoDomain", nullable=false, length=100)
+    @ManyToOne
+    @JoinColumn(name = "cartao_id", nullable=false)
     private CartaoDeCreditoDomain credit_card;
 }
