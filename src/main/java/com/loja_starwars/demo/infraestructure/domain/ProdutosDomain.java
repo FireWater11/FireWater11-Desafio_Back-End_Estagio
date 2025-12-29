@@ -28,22 +28,22 @@ public class ProdutosDomain {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable=false, length=100)
+    @Column(name = "title", nullable=false, length=100)
     private String title;
 
-    @Column(nullable=false, length=100)
+    @Column(name = "price", nullable=false, length=100)
     private Integer price;
 
-    @Column(nullable=false, length=100)
+    @Column(name = "zipcode", nullable=false, length=100)
     private String zipcode;
 
-    @Column(nullable=false, length=100)
+    @Column(name = "seller", nullable=false, length=100)
     private String seller;
 
-    @Column(nullable=false, length=100)
+    @Column(name = "thumbnailHd", nullable=false, length=100)
     private String thumbnailHd;
 
-    @Column(nullable=false, length=100)
+    @Column(name = "date", nullable=false, length=100)
     private String date;
 
 }
