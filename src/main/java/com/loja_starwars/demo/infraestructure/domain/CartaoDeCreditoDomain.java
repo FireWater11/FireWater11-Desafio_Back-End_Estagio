@@ -36,10 +36,10 @@ public class CartaoDeCreditoDomain {
     private String card_holder_name;
 
     @Column(nullable=false, length=100)
-    private int value;
+    private Integer value;
 
     @Column(nullable=false, length=100)
-    private int cvv;
+    private Integer cvv;
 
     @Column(nullable=false, length=100)
     private String exp_date;
